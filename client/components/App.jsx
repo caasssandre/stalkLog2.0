@@ -9,10 +9,8 @@ const App = () => {
   return (
     <Router>
       <Nav/>
-      <Route path='/login' component={Login}/>
-      <Route path='/register' component={Register}/>
-    <Register/>
-    <Login/>
+      <Route exact path='/login' component={Login}/>
+      <Route exact path='/register' component={Register}/>
     </Router>
   )
 }

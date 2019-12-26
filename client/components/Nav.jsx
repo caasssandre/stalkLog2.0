@@ -7,7 +7,11 @@ class Nav extends React.Component {
   render(){
     const {auth, logout} = this.props
     return(
-      <Link to='/' onClick={()=> logout()}>Logout</Link>
+      <div className='navbar'>
+        <Link to='/' onClick={()=> logout()}>Logout</Link>
+        <Link to='/login'>Login</Link>
+        <Link to='/register'>Register</Link>
+      </div>
     )
   }
 }
