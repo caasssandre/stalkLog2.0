@@ -12,7 +12,6 @@ function createUser (user_name, first_name, last_name, password, testDb) {
 }
 
 function userExists (user_name, testDb) {
-  console.log('in here')
   const db = testDb || connection
 
   return db('users')
