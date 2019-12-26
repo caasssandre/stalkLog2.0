@@ -1,28 +1,70 @@
-# A starter webpack project for React
+# loggingApp
 
-This is a starter project that uses webpack to transpile and bundle ES6 React code. To use, consider these steps:
+## Welcome
+This project was born to solve a problem that has personal and ideological significance to us. Chris Deak, my colleague in this endeavour, is a resarcher in psychology, specializing in gender inequalities. She is herself a victim of stalking. In her research, Chris found that stalking behaviours were often under reported and that the quality of the data reported by victims lacked precision. These gaps in the reported information make it difficult for the police to effectively combat stalking.
 
-* Fork this repo
-* Rename your repo according to the app you're building
+This is how this project was born. We wanted to offer a platform for victims to effectively and effortlessly track stalking behaviours. We also want the platform to offer information and help to slaking victims. We hope that with the help of this platform, stalking awareness will grow and 
 
-```sh
-git clone https://github.com/[your-account]/[your-app].git
-cd [your-app] && npm i
-```
 
-To start the development server with a watcher that rebuilds your code, run `npm run dev`. The assets built by webpack are placed in `server/public`. This folder is defined as a static folder in an Express.js server that can be started with `npm run server`.
 
-Additional components should be placed in `client/components`.
+## The Tech
+* [React](https://reactjs.org/docs/getting-started.html)
+* [Redux](https://redux.js.org/)
+* [Express](https://expressjs.com/en/api.html)
+* [Knex.js (SQL)](https://knexjs.org/)
+---
 
-## Separate client/server
+## User Stories
 
-The boilerplate is also set up to host the client using `webpack-dev-server` with hot module reloading etc. To use this method, in one terminal run:
-```sh
-npm run client
-```
-and in the other:
-```sh
-npm run server
-```
-The client will be available on http://localhost:8080 and the server on http://localhost:3000. Note that you will still need to manage CORS between the two, as they are on different ports.
+### MVP
+* [] I want to be able to use the app on my phone 
+* [] I want my information to be safe
+* [] I want to be able to log in
+* [] I want to have access to my logs in chronological order
+* [] I do not want to be able to modify the logs
+* [] I want to be able to log the location of stalking events on a map
+* [] I want to see help pages with advice based on recognised literature
+* [] I want to have my own profile
+* [] I want to see information related to how to fill in the logs
 
+---
+
+### Stretch
+* [] I want to be able to add photos to the logs
+* [] I want to give a rating of how sure I am of the event's reality
+* [] I want to have access to my map
+* [] I want the app to have a log in for the police to be able to see my logs
+* [] I want to be able to talk to the police via a chat inside the app
+* [] I want my friends and family to be able to log their observations on my profile
+* [] I want to be able to print my logs
+
+---
+
+## Views (Client Side)
+  | name | purpose |
+  | --- | --- |
+  | new log | Allow user to enter a new event |
+  
+  ---
+
+## Reducers (Client Side)
+  | name | purpose |
+  | --- | --- |
+  | x | Stores info about x |
+  
+  ---
+
+ ## API (Client - Server)
+| Method | Endpoint | Usage | Response |
+| --- | --- | --- | --- | 
+| Post | /api/v1/log | Create and save a new log | 200 |
+
+---
+
+## DB (Server Side)
+### Users
+  | Column Name | Data Type |
+  | --- | --- |
+  | id | Integer |
+ 
+ ---
