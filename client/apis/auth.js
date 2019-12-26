@@ -6,11 +6,12 @@ import { isAuthenticated } from '../utils/auth'
 export function register (creds) {
   const token = get('token')
   const headers = { Accept: 'application/json' }
-
+  
   if (isAuthenticated()) {
     headers['Authorization'] = `Bearer ${token}`
   }
-
+  
+  console.log('apis auth register')
   return request
     .post('/api/auth/register')
     .set(headers)
