@@ -11,7 +11,7 @@ export function register (creds) {
     headers['Authorization'] = `Bearer ${token}`
   }
   
-  console.log('apis auth register')
+  console.log(token)
   return request
     .post('/api/auth/register')
     .set(headers)
