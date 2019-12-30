@@ -2,15 +2,16 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
 import {logoutUser} from '../actions/logout'
+import { isAuthenticated } from '../utils/auth'
 
 class Nav extends React.Component {
   render(){
     const {auth, logout} = this.props
     return(
       <div className='navbar'>
-        <Link to='/' onClick={()=> logout()}>Logout</Link>
-        <Link to='/login'>Login</Link>
-        <Link to='/register'>Register</Link>
+        {isAuthenticated() && <Link to='/' onClick={()=> logout()}>Logout</Link>}
+        {!isAuthenticated() && <Link to='/login'>Login</Link>}
+        {!isAuthenticated() && <Link to='/register'>Register</Link>}
       </div>
     )
   }
