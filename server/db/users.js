@@ -1,7 +1,6 @@
 const {generatePasswordHash} = require('../auth/hash')
 
 const connection = require('./connection')
-
 function createUser (user_name, first_name, last_name, password, testDb) {
   const db = testDb || connection
 

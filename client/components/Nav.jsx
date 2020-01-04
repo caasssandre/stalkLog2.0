@@ -18,6 +18,9 @@ class Nav extends React.Component {
         <div className="navitem">
           {!isAuthenticated() && <Link to='/register'>Register</Link>}
         </div>
+        <div className="navitem">
+          {isAuthenticated() && <Link to='/profile'>Profile</Link>}
+        </div>
       </div>
     )
   }

@@ -1,11 +1,16 @@
 import React from 'react'
 import { isAuthenticated } from '../utils/auth'
+import { connect } from 'react-redux'
 
 class Profile extends React.Component {
   render(){
     if(isAuthenticated()){
       return (
-        <h1>Profile</h1>
+        logs.map(log=>{
+          return(
+            <Log logInfo={log}/>
+          )
+        })
       )
     }
     else{
@@ -16,4 +21,10 @@ class Profile extends React.Component {
   }
 }
 
-export default Profile
+function mapStateToProps(state){
+  return ({
+    logs : state.logs
+  })
+}
+
+export default connect(mapStateToProps)(Profile)
