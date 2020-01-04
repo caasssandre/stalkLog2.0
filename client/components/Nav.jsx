@@ -9,9 +9,15 @@ class Nav extends React.Component {
     const {auth, logout} = this.props
     return(
       <div className='navbar'>
-        {isAuthenticated() && <Link to='/' onClick={()=> logout()}>Logout</Link>}
-        {!isAuthenticated() && <Link to='/login'>Login</Link>}
-        {!isAuthenticated() && <Link to='/register'>Register</Link>}
+        <div className="navitem">
+          {isAuthenticated() && <Link to='/' onClick={()=> logout()}>Logout</Link>}
+        </div>
+        <div className="navitem">
+          {!isAuthenticated() && <Link to='/login'>Login</Link>}
+        </div>
+        <div className="navitem">
+          {!isAuthenticated() && <Link to='/register'>Register</Link>}
+        </div>
       </div>
     )
   }
