@@ -19,7 +19,7 @@ This is how this project was born. We wanted to offer a platform for victims to 
 ### MVP
 * [] I want to be able to use the app on my phone 
 * [] I want my information to be safe
-* [] I want to be able to log in
+* [x] I want to be able to log in
 * [] I want to have access to my logs in chronological order
 * [] I do not want to be able to modify the logs
 * [] I want to be able to log the location of stalking events on a map
